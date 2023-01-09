@@ -1,0 +1,58 @@
+#functions: a block of code which performs a specific task.
+#function syntax
+
+#normal function 
+#def function name:execute statement
+ 
+#lamba function 
+#doesn't have a name associated with it
+#lamda arguments:expression
+def hello():
+    print("Hello world")
+hello()
+
+def add10(x):
+    return x+10
+print(add10(20))
+
+def add50(x):
+    return x+50
+print(add50(10))
+
+def even_odd(x):
+    if x%2==0:
+        print(x, "is even")
+    else:
+        print(x, "is odd")
+(even_odd(7))
+
+n=lambda x: x*x*x
+print(n(6))
+
+#lambda functon with filter
+l1=[5,9,4,10,8,6,3]
+final_list=list(filter(lambda x: (x%2!=0),l1))
+print(final_list)
+
+#lambda function with map
+#map function is used to modify all the elements within the list
+l2=[3,9,8,7,6,1,5]
+final_list=list(map(lambda x: x*2,l2))
+print(final_list)
+
+#reduce fuction
+from functools import reduce
+l3=[12,98,76,45,50,39]
+sum=reduce((lambda x, y:x + y), l3)
+print(sum)
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------
+output:
+Hello world
+30
+60
+7 is odd
+216
+[5, 9, 3]
+[6, 18, 16, 14, 12, 2, 10]
+320
